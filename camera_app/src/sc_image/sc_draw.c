@@ -50,25 +50,29 @@ ScImageErrors sc_image_draw_box(ScImage *image, ScBox box){
     //draw top line
     for(int line = 0; line < LINE_FONT; line++) {
         if (y_min + line < image->height ){
-            _draw_vertical_line(buffer + BYTE_FOR_PIXEL *((y_min + line) * image->width + x_min), BYTE_FOR_PIXEL * (x_max - x_min));
+            _draw_vertical_line(buffer + BYTE_FOR_PIXEL *((y_min + line) * image->width + x_min),
+                                BYTE_FOR_PIXEL * (x_max - x_min));
         }
     }
     //draw bottom line
     for(int line = 0; line < LINE_FONT; line++) {
         if (y_max + line < image->height ){
-            _draw_vertical_line(buffer + BYTE_FOR_PIXEL *((y_max + line) * image->width + x_min), BYTE_FOR_PIXEL *(x_max - x_min));
+            _draw_vertical_line(buffer + BYTE_FOR_PIXEL *((y_max + line) * image->width + x_min), 
+                                BYTE_FOR_PIXEL *(x_max - x_min));
         }
     }
     //draw left line 
     for(int line = 0; line < LINE_FONT; line++) {
         if (x_min + line < image->width ){
-            _draw_horizonal_line(buffer + BYTE_FOR_PIXEL *(y_min * image->width + x_min + line), image->width , y_max - y_min);
+            _draw_horizonal_line(buffer + BYTE_FOR_PIXEL * (y_min * image->width + x_min + line),
+                                 image->width , y_max - y_min);
         }
     }
     //draw right line 
     for(int line = 0; line < LINE_FONT; line++) {
         if (x_min + line < image->width ){
-            _draw_horizonal_line(buffer + BYTE_FOR_PIXEL *(y_min * image->width + x_max + line), image->width , y_max - y_min);
+            _draw_horizonal_line(buffer + BYTE_FOR_PIXEL * (y_min * image->width + x_max + line),
+                                 image->width, y_max - y_min);
         }
     }
     return SC_IMAGE_ERROR_SUCCESS;
