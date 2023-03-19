@@ -1,3 +1,10 @@
+/*********************************************
+* File - detector.h
+* Decpiption - library of detect person in given image.(using deep lerning) 
+* Project - Smart Camera
+* Author - Yosi Malka, yehosefm@gmail.com
+*********************************************/
+
 #include "sc_image.h"
 
 

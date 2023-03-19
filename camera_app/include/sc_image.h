@@ -1,3 +1,10 @@
+/*********************************************
+* File - sc_image.h
+* Decpiption - repersention of RGB image. 
+* Project - Smart Camera
+* Author - Yosi Malka, yehosefm@gmail.com
+*********************************************/
+
 #ifndef SC_IMAGE_H
 #define SC_IMAGE_H
 

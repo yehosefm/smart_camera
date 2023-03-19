@@ -1,3 +1,9 @@
+/*********************************************
+* File - serial.h
+* Decpiption - interanl serial manager. 
+* Project - Smart Camera
+* Author - Yosi Malka, yehosefm@gmail.com
+*********************************************/
 
 typedef struct serial serial_t;
 

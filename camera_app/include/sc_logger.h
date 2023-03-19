@@ -1,3 +1,10 @@
+/*********************************************
+* File - sc_logger.h
+* Decpiption - internal logger for SmartCamera (sc). 
+* Project - Smart Camera
+* Author - Yosi Malka, yehosefm@gmail.com
+*********************************************/
+
 #include <stdarg.h>
 
 #ifndef LOGGER_H_

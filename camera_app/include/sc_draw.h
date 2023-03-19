@@ -1,3 +1,10 @@
+/*********************************************
+* File - sc_draw.h
+* Decpiption - lib for drawing shapes on RGB images. 
+* Project - Smart Camera
+* Author - Yosi Malka, yehosefm@gmail.com
+*********************************************/
+
 #include "detector.h" // for box
 
 #ifndef SC_DRAW_H
