@@ -31,7 +31,7 @@ Clone tensorflow src code to external directory:
 git clone https://github.com/tensorflow/tensorflow.git
  ```
 
-download pre-trained tensorflow lite model and save it in the external directory
+Download pre-trained tensorflow lite model and save it in the external directory
 ```bash 
 https://tfhub.dev/iree/lite-model/ssd_spaghettinet_edgetpu_large_320/uint8/nms/1?lite-format=tflite
 ``` 
