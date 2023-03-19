@@ -1,3 +1,11 @@
+/*********************************************
+* File - video_pip.h
+* Decpiption - playing video pipline (gstreamer pipeline). 
+* Project - Smart Camera
+* Author - Yosi Malka, yehosefm@gmail.com
+*********************************************/
+
+
 //extern "C" {
     #include <gst/gst.h>
 //}

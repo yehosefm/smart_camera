@@ -1,3 +1,10 @@
+/*********************************************
+* File - gstMyfilter.h
+* Decpiption - gstreamer plugin for detection presons.
+* Project - Smart Camera
+* Author - Yosi Malka, yehosefm@gmail.com
+*********************************************/
+
 #ifndef __GST_MYFILTER_H__
 #define __GST_MYFILTER_H__
 

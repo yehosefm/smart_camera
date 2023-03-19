@@ -1,3 +1,10 @@
+/*********************************************
+* File - serial_moves.h
+* Decpiption - controll of engine movment via serail. 
+* Project - Smart Camera
+* Author - Yosi Malka, yehosefm@gmail.com
+*********************************************/
+
 #include "serial.h"
 
 
