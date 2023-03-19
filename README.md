@@ -55,4 +55,4 @@ Please make sure to update tests as appropriate.
 ## License
 
 All rights reserved to Yosi Malka, TLV.
-mail: yehosefm@gmail.com# Smart Camera
+mail: yehosefm@gmail.com
