@@ -181,25 +181,12 @@ gst_my_filter_sink_event (GstPad * pad, GstObject * parent,
 
 
 void draw_boxes_on_buffer(void *buffer, detector_thread_s d){
-  ScBox boxes = detection_thread_read_box(d);
-  unsigned char * first_pixel = buffer;
-  if(boxes.class_num != -1){
-      int x_min = boxes.x_min * 1289;
-      int x_max = boxes.x_max * 1280;
-      int y_min = boxes.y_min * 720;
-      int y_max = boxes.y_max * 720;
-    if (y_max < 720){
-      for(int i = x_min; i < x_max * 3; i++ ){
-          first_pixel[(1280 *y_max) * 3  + i] = 0;
-      }
-    }
-    if (y_min < 720){
-      for(int i = x_min; i < x_max * 3; i++ ){
-          first_pixel[(1280 *y_min) * 3  + i] = 0;
-      }
-    }
-  }
-
+  ScBox box = detection_thread_read_box(d);
+  ScImage image;
+  image.buffer = buffer;
+  image.height = 720;
+  image.width = 1280;
+  sc_image_draw_box(&image,  box);
 }
 
 void send_to_detector_thread(void *buffer, detector_thread_s d){
