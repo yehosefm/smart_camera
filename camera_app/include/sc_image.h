@@ -49,6 +49,4 @@ ScImageErrors sc_image_resizer(ScImage *input, unsigned int nwidth, unsigned int
 ScImageErrors sc_image_draw_box(ScImage *image, ScBox box); 
 
 
-
-
 #endif //SC_IMAGE_H

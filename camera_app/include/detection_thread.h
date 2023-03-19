@@ -9,6 +9,7 @@
 #include "detector.h"
 #include "sc_image.h"
 
+
 typedef struct detector_thread_s {
     pthread_t thread;
     pthread_mutex_t lock;
@@ -22,8 +23,10 @@ typedef struct detector_thread_s {
 ScBox detection_thread_read_box(detector_thread_s t);
 
 
-//return 1 if is empy;
-//return 0 if is full;
+/*
+  return 1 if is empy;
+  return 0 if is full;
+*/
 int  detection_thread_image_is_empty(detector_thread_s t);
 
 

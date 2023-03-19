@@ -5,10 +5,8 @@
 * Author - Yosi Malka, yehosefm@gmail.com
 *********************************************/
 
+#include <gst/gst.h>
 
-//extern "C" {
-    #include <gst/gst.h>
-//}
 
 class VideoPip {
     public:

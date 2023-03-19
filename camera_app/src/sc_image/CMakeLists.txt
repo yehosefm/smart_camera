@@ -6,7 +6,7 @@ cmake_minimum_required(VERSION 3.20)
 project(sc_image)
 
 ####################### Targets ########################
-add_library(${PROJECT_NAME} SHARED sc_resizer.c)
+add_library(${PROJECT_NAME} SHARED sc_resizer.c sc_draw.c)
 
 #add_subdirectory(../sc_common sc_common)
 
