@@ -48,7 +48,7 @@ int VideoPip::play() {
 void VideoPip::create_pipline(){
     /* Create the elements */
     source = gst_element_factory_make ("v4l2src", "source");
-    g_object_set (source, "device", "/dev/video2", NULL);
+    g_object_set (source, "device", "/dev/video0", NULL);
     sink = gst_element_factory_make ("autovideosink", "sink");
     more_element[0] = gst_element_factory_make ("videoconvert", "videoconert0");
     more_element[1] = gst_element_factory_make ("videoconvert", "videoconert1");

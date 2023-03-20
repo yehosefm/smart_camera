@@ -3,7 +3,6 @@
 #define BLACK 0
 
 int resizer(unsigned char *image, int width, int height,unsigned char *output){
-    
     for(int line = 0; line < NET_Y_PIXEL; ++line){
         for(int col =0; col < NET_X_PIXEL; ++col){
             unsigned int y = (float)height / NET_Y_PIXEL * line;
