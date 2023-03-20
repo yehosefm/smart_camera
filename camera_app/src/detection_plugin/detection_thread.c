@@ -1,8 +1,10 @@
-#include "detection_thread.h"
-#include "serial_moves.h"
-
 #include <stdlib.h>
 #include <stdio.h>
+
+#include "detection_thread.h"
+#include "serial.h"
+#include "serial_moves.h"
+
 
 void *detection_func(void *vargsp){
     detector_thread_s t_s = (detector_thread_s)vargsp;
@@ -13,10 +15,18 @@ void *detection_func(void *vargsp){
         printf("ERROR opening detector");
         return NULL;
     }
-    //serial_t* serial_port = open_serail();
-    //if(serial_port == NULL){
-    //    printf("bug with serail\n");
-    //}
+    serial_t* serial_port = open_serail();
+    if(serial_port == NULL){
+        printf("bug with serail\n");
+        return NULL;
+    }
+    
+    serial_controller serial_c;
+    if (NULL == (serial_c = serial_controller_open(serial_port))) {
+        printf("bug on serail controller\n");
+        return NULL;
+    }
+
     while(t_s->is_alive){
         pthread_mutex_lock(&t_s->lock);
         image = t_s->image;
@@ -30,15 +40,19 @@ void *detection_func(void *vargsp){
             t_s->boxes = res;
             pthread_mutex_unlock(&t_s->lock);
             free(image);
-            float avg = (t_s->boxes.x_max + t_s->boxes.x_min) / 2;
-            if (avg > 0.6){
-                //int byte_writen = serial_move_right(serial_port, 0);
-                //printf("right %d\n", byte_writen);
-                printf("right\n");
-            } else if (avg < 0.4){
-                //int byte_writen = serial_move_left(serial_port, 0);
-                //printf("left %d\n", byte_writen);
-                printf("left\n");
+            if(t_s->boxes.class_num >=0 ) {
+                float avg = (t_s->boxes.x_max + t_s->boxes.x_min) / 2;
+                if (avg > 0.6){
+                    if(SERIAL_ERROR_SUCCESS == serail_controller_available(serial_c)) {
+                        serial_controller_move_right(serial_c, 0);
+                        printf("right\n");
+                    }
+                } else if (avg < 0.4){
+                    if(SERIAL_ERROR_SUCCESS == serail_controller_available(serial_c)) {
+                        serial_controller_move_left(serial_c, 0);
+                        printf("left\n");
+                    }
+                }
             }
         }
     }
