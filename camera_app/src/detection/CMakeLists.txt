@@ -13,7 +13,7 @@ if(NOT TENSORFLOW_SOURCE_DIR)
 endif()
 
 add_subdirectory(
-  "${TENSORFLOW_SOURCE_DIR}/tensorflow/lite"
+  "${TENSORFLOW_SOURCE_DIR}/tensorflow/lite/c"
   "${CMAKE_CURRENT_BINARY_DIR}/tensorflow-lite"
   EXCLUDE_FROM_ALL
 )
