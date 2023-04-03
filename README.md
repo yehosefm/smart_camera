@@ -2,6 +2,10 @@
 
 Smart Camera project is the open source app for detect persons on image and moves the camera towards.  
 
+## Video for the project:
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/6XpyfJSzU9Y/0.jpg)](https://youtu.be/6XpyfJSzU9Y)
+
 ##  Linux prerequisite
 
 Clone the repository:
