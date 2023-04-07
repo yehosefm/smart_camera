@@ -32,7 +32,7 @@ cd smart_camera && mkdir external && cd external
 Clone tensorflow src code to external directory:
 
 ```bash
-git clone https://github.com/tensorflow/tensorflow.git
+git clone https://github.com/tensorflow/tensorflow.git tensorflow_src
  ```
 
 Download pre-trained tensorflow lite model and save it in the external directory
