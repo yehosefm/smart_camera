@@ -27,7 +27,7 @@ sudo apt install cmake
 
 In smart_camera directory (from latest clone) make the new  directory named external:
 ```bash 
-cd smart_camera && mkdir exteranl && cd exteranl
+cd smart_camera && mkdir external && cd external
 ```
 Clone tensorflow src code to external directory:
 
