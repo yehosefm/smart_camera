@@ -17,22 +17,22 @@ git clone https://github.com/yehosefm/smart_camera.git
 Install GStreamer globally on your machine:
 
 ```bash 
-apt-get install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgstreamer-plugins-bad1.0-dev gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav gstreamer1.0-doc gstreamer1.0-tools gstreamer1.0-x gstreamer1.0-alsa gstreamer1.0-gl gstreamer1.0-gtk3 gstreamer1.0-qt5 gstreamer1.0-pulseaudio
+apt-get install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgstreamer-plugins-bad1.0-dev gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav gstreamer1.0-tools gstreamer1.0-x gstreamer1.0-alsa gstreamer1.0-gl gstreamer1.0-gtk3 gstreamer1.0-qt5 gstreamer1.0-pulseaudio
 ```
 
-Install Cmake:
+Install toolchain and CMake:
 ```bash 
-sudo apt install cmake
+sudo apt install build-essential cmake
 ```
 
 In smart_camera directory (from latest clone) make the new  directory named external:
 ```bash 
-cd smart_camera && mkdir exteranl && cd exteranl
+cd smart_camera && mkdir external && cd external
 ```
 Clone tensorflow src code to external directory:
 
 ```bash
-git clone https://github.com/tensorflow/tensorflow.git
+git clone https://github.com/tensorflow/tensorflow.git tensorflow_src
  ```
 
 Download pre-trained tensorflow lite model and save it in the external directory
