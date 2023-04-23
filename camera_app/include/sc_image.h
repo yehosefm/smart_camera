@@ -1,6 +1,6 @@
 /*********************************************
 * File - sc_image.h
-* Decpiption - repersention of RGB image. 
+* Description - repersention of RGB image. 
 * Project - Smart Camera
 * Author - Yosi Malka, yehosefm@gmail.com
 *********************************************/

@@ -1,6 +1,6 @@
 /*********************************************
 * File - detection_thread.h
-* Decpiption - open new thread that detecet persons in images. 
+* Description - open new thread that detecet persons in images. 
 * Project - Smart Camera
 * Author - Yosi Malka, yehosefm@gmail.com
 *********************************************/
