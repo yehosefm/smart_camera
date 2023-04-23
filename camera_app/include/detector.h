@@ -1,6 +1,6 @@
 /*********************************************
 * File - detector.h
-* Decpiption - library of detect person in given image.(using deep lerning) 
+* Description - library of detect person in given image.(using deep lerning) 
 * Project - Smart Camera
 * Author - Yosi Malka, yehosefm@gmail.com
 *********************************************/

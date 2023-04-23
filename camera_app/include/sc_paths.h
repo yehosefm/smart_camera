@@ -1,6 +1,6 @@
 /*********************************************
 * File - sc_paths.h
-* Decpiption - internal paths for SmartCamera (sc). 
+* Description - internal paths for SmartCamera (sc). 
 * Project - Smart Camera
 * Author - Yosi Malka, yehosefm@gmail.com
 *********************************************/

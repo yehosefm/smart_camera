@@ -1,6 +1,6 @@
 /*********************************************
 * File - serial.h
-* Decpiption - interanl serial manager. 
+* Description - interanl serial manager. 
 * Project - Smart Camera
 * Author - Yosi Malka, yehosefm@gmail.com
 *********************************************/
