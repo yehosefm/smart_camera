@@ -1,14 +1,4 @@
-##################### STANDARD HEADER #########################
-cmake_minimum_required(VERSION 3.20)
 
+add_library(sc_image SHARED sc_resizer.c sc_draw.c)
 
-##################### PROJECT DEF #############################
-project(sc_image)
-
-####################### Targets ########################
-add_library(${PROJECT_NAME} SHARED sc_resizer.c sc_draw.c)
-
-#add_subdirectory(../sc_common sc_common)
-
-target_include_directories(${PROJECT_NAME} PUBLIC  ../../include)
-target_link_libraries(${PROJECT_NAME} sc_common)
+target_link_libraries(sc_image project_config sc_common)
