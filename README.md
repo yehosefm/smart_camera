@@ -11,7 +11,7 @@ Smart Camera project is the open source app for detect persons on image and move
 Clone the repository:
 
 ```bash
-git clone https://github.com/yehosefm/smart_camera.git
+git clone --recursive https://github.com/yehosefm/smart_camera.git
 ```
 
 Install GStreamer globally on your machine:
@@ -29,12 +29,6 @@ In smart_camera directory (from latest clone) make the new  directory named exte
 ```bash 
 cd smart_camera && mkdir external && cd external
 ```
-Clone tensorflow src code to external directory:
-
-```bash
-git clone https://github.com/tensorflow/tensorflow.git tensorflow_src
- ```
-
 Download pre-trained tensorflow lite model and save it in the external directory
 ```bash 
 https://tfhub.dev/iree/lite-model/ssd_spaghettinet_edgetpu_large_320/uint8/nms/1?lite-format=tflite

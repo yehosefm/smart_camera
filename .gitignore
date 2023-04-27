@@ -1,3 +1,6 @@
+# Do not track vendor repo changes
+external/tensorflow_src/*
+
 # Prerequisites
 *.d
 
