@@ -25,10 +25,6 @@ Install toolchain and CMake:
 sudo apt install build-essential cmake
 ```
 
-In smart_camera directory (from latest clone) make the new  directory named external:
-```bash 
-cd smart_camera && mkdir external && cd external
-```
 Download pre-trained tensorflow lite model and save it in the external directory
 ```bash 
 https://tfhub.dev/iree/lite-model/ssd_spaghettinet_edgetpu_large_320/uint8/nms/1?lite-format=tflite
